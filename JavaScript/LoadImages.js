@@ -9,7 +9,7 @@
                 var length = imageCollection.length;
                 imageCollection.each(function () {
                     var images = $(this).attr("href");
-                    $("#header ul").append('<li style="background-image: url(/JewelSite/' + images + ');"></li>');
+                    $("#header ul").append('<li style="background-image: url(' + images + ');"></li>');
                     if (i == length - 1) {
                         $("#header ol").append('<li class="active" onclick="pointClick(' + i + ')"><i class="fa fa-circle-o"></i></li>');
                     }
