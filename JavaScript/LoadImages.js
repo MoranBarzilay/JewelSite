@@ -1,7 +1,7 @@
 ﻿function load(path) {
     return function () {
         $.ajax({
-            url: 'https://crossorigin.me/' + path,
+            url: path,
             success: function (data) {
                 var i = 0;
                 var imageCollection = $(data).find("a:contains(.jpeg)");
