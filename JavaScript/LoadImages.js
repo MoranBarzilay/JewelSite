@@ -1,6 +1,7 @@
 ﻿function load(path) {
     return function () {
         $.ajax({
+            contentType: 'html',
             url: path,
             success: function (data) {
                 var i = 0;
