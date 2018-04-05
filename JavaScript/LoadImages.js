@@ -4,7 +4,7 @@
             contentType: 'html',
             url: path,
             success: function (data) {
-                data = data.substring(1, data.length-1);
+                data = data.substring(0, data.length-1);
                 var url = this.url;
                 var res = data.split(";");
                 for(var i = 0; i < res.length; i++){
