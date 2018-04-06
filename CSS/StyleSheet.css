@@ -104,6 +104,11 @@ h1 {
             font-family: serif;
         }
 
+        .slider ul li:hover{
+            transform: scale(1.5);
+	        transition: transform 1s ease;
+        }
+
             /*.slider ul li:first-of-type {
                 background-image: url("http://www.misr5.news/wp-content/uploads/2015/10/6957804-girl-children-blonde-blue-eyes-autumn-mood.jpg")
             }*/
