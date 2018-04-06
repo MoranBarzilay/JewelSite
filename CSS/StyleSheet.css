@@ -104,9 +104,9 @@ h1 {
             font-family: serif;
         }
 
-        .slider ul li:hover{
+        .slider ul li:hover, .slider ul:hover{
             transform: scale(1.5);
-	        transition: transform 1s ease;
+	    transition: transform 1s ease;
         }
 
             /*.slider ul li:first-of-type {
