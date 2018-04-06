@@ -93,6 +93,11 @@ h1 {
         overflow: hidden;
         border-radius: 15px
     }
+    
+    .slider ul:hover{
+    	transform: scale(1.5);
+    	transition: transform 1s ease;
+    }
 
         .slider ul li {
             position: absolute;
@@ -102,11 +107,6 @@ h1 {
             background-position: center;
             color: #fff;
             font-family: serif;
-        }
-
-        .slider ul li:hover, .slider ul:hover{
-            transform: scale(1.5);
-	    transition: transform 1s ease;
         }
 
             /*.slider ul li:first-of-type {
