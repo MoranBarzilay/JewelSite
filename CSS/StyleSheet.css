@@ -76,10 +76,10 @@ h1 {
 
 .slider {
     width: 100%;
-    width: 750px;
+    max-width: 750px;
     padding: 0 50px;
     margin: 25px auto 0;
-    height: 562px;
+    height: 350px;
     position: relative;
 }
 
