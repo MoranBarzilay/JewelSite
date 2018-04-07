@@ -5,7 +5,7 @@
         controll = $(".slider .controll"),
         playpause = $(".playpause"),
         sliderTime = 1,
-        sliderWait = 100,
+        sliderWait = 3000,
         i = 999,
         autoRun,
         stop = false;
@@ -18,12 +18,6 @@
     // slider gsap
     function gsapSlider(whose, left) {
         i++;
-        console.log(sliderWait);
-        if (sliderWait <= 100) {
-            clearInterval(autoRun);
-            sliderWait = 3000;
-            autoRunSlider();
-        }
         if (whose.hasClass("active")) {
             TweenMax.fromTo(
                 ".slider ul li.active",
