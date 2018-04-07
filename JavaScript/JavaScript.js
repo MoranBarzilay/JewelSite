@@ -110,4 +110,6 @@
     });
     this.rightClick = rightClick;
     this.pointClick = pointClick;
+     
+     rightClick();
 });
