@@ -108,8 +108,7 @@
             $(this).attr('title', 'pause');
         }
     });
-    this.rightClick = rightClick;
+    window.rightClick = rightClick;
     this.pointClick = pointClick;
      
-     rightClick();
 });
