@@ -5,9 +5,10 @@
         controll = $(".slider .controll"),
         playpause = $(".playpause"),
         sliderTime = 1,
-        sliderWait = 3000,
+        sliderWait = 100,
         i = 999,
         autoRun,
+        afterStart = false,
         stop = false;
     // Reset
     $(".slider ul li:first").css("left", 0);
@@ -18,6 +19,12 @@
     // slider gsap
     function gsapSlider(whose, left) {
         i++;
+        if (sliderWait <= 100) {
+            clearInterval(autoRun);
+            sliderWait = 3000;
+            autoRunSlider();
+            afterStart = true;
+        }
         if (whose.hasClass("active")) {
             TweenMax.fromTo(
                 ".slider ul li.active",
@@ -33,13 +40,15 @@
     });
     // Arrow left
     controll.first().on("click", function () {
-        var slide = $(".slider ul li.active, .slider ol li.active").is(
-            ":first-of-type"
-        )
-            ? $(".slider ul li:last, .slider ol li:last")
-            : $(".slider ul li.active, .slider ol li.active").prev("li");
-        runSlider(slide);
-        gsapSlider(slide, "100%");
+        if(afterStart){
+            var slide = $(".slider ul li.active, .slider ol li.active").is(
+                ":first-of-type"
+            )
+                ? $(".slider ul li:last, .slider ol li:last")
+                : $(".slider ul li.active, .slider ol li.active").prev("li");
+            runSlider(slide);
+            gsapSlider(slide, "100%");
+        }
     });
     // Arrow right
     controll.last().on("click", rightClick);
