@@ -48,7 +48,9 @@
         gsapSlider(slide, "100%");
     });
     // Arrow right
-    controll.last().on("click", function () {
+    controll.last().on("click", rightClick());
+    // Slide Picture Right.    
+    function rightClick(){
         var slide = $(".slider ul li.active, .slider ol li.active").is(
             ":last-of-type"
         )
@@ -56,7 +58,7 @@
             : $(".slider ul li.active, .slider ol li.active").next("li");
         runSlider(slide);
         gsapSlider(slide, "-100%");
-    });
+    }
     // Point
     //$(".slider ol li").on("click", pointClick());
     //Point Click
@@ -115,5 +117,6 @@
         }
     });
 
+    this.rightClick = rightClick;
     this.pointClick = pointClick;
 });
