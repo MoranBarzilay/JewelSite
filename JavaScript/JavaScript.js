@@ -42,7 +42,7 @@
         gsapSlider(slide, "100%");
     });
     // Arrow right
-    controll.last().on("click", rightClick());
+    controll.last().on("click", rightClick);
     // Slide Picture Right.    
     function rightClick(){
         var slide = $(".slider ul li.active, .slider ol li.active").is(
