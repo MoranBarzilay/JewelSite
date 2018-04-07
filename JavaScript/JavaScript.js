@@ -110,7 +110,18 @@
             $(this).attr('title', 'pause');
         }
     });
-
-    this.rightClick = rightClick;
+    //First Move Right
+    function firstMove(){
+        return function() {
+            var slide = $(".slider ul li.active, .slider ol li.active").is(
+                ":last-of-type"
+            )
+                ? $(".slider ul li:first, .slider ol li:first")
+                : $(".slider ul li.active, .slider ol li.active").next("li");
+            runSlider(slide);
+            gsapSlider(slide, "-100%");
+        }
+    }
+    this.rightClick = firstMove;
     this.pointClick = pointClick;
 });
