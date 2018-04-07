@@ -74,8 +74,6 @@
         $('.circle-points .active').removeClass('active');
         $('.circle-points li').eq(indexP).addClass('active');
     }
-
-
     // Auto run slider
     function autoRunSlider() {
         if (body.css("direction") === "ltr" && stop === false) {
@@ -110,18 +108,6 @@
             $(this).attr('title', 'pause');
         }
     });
-    //First Move Right
-    function firstMove(){
-        return function() {
-            var slide = $(".slider ul li.active, .slider ol li.active").is(
-                ":last-of-type"
-            )
-                ? $(".slider ul li:first, .slider ol li:first")
-                : $(".slider ul li.active, .slider ol li.active").next("li");
-            runSlider(slide);
-            gsapSlider(slide, "-100%");
-        }
-    }
-    this.rightClick = firstMove;
+    this.rightClick = rightClick;
     this.pointClick = pointClick;
 });
